@@ -1,0 +1,33 @@
+.l--header {
+	background-color: $medic-blue;
+	height: 75px;
+}
+.l--breadcrumbs .breadcrumb{
+	background-color: $body-bg;
+}
+.l--price, .l--what-is {
+	@include gradient(#1c75db, $medic-blue);
+}
+.l--first-screen {
+	background-size: cover;
+	background: url(../img/first-bg.jpg) no-repeat center 0;
+	margin: 0 auto;
+	padding: 100px 0;	
+}
+.l--header, .l--footer {
+	position: relative;
+}
+.l--footer {
+	background-color: $light-text;
+}
+.overlay {
+	background-color: rgba(0,0,0,0.75);
+	bottom: 0;
+	display: none;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 150;
+}
