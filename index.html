@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Hydrocolon</title>
+</head>
+<body>
+	<header class="l--header container-fluid">
+		<div class="container">
+			<div class="logo col-md-1 col-sm-1">
+				<a href="/"><img src="img/logo/light-logo.png" alt="Image"></a>
+			</div>
+			<div class="contacts col-md-4 col-sm-4">
+				<div class="contacts__tel"><a href="tel:+38 (097) 423-15-15"><i class="fa fa-mobile" aria-hidden="true"></i>+38 (097) 423-15-15</a></div>
+				<div class="contacts__call-me">
+					<a href="#this" id="get-header-popup">Обратный звонок</a>
+					<div class="contacts__call-me__popup col-md-4">
+						<p>Укажите свой контактный номер и мы свяжемся с Вами в ближайшее время</p>
+						<input type="text" value="+38 (0__) ___-__-__" required>
+						<button class="send-tel" id="call-me-header">Отправить</button>
+					</div>
+				</div>
+			</div>
+			<button class="toggle-menu" type="button"><span class="toggle-menu__lines"></span></button>
+			<nav class="col-md-7 row">
+				<ul class="menu" id="toggle-menu">
+					<li class="menu-item"><a class="menu-item__link" href="/about.php">О&nbsp;процедуре</a></li>
+					<!-- <li class="menu-item"><a class="menu-item__link" href="/about.php#what-is">О&nbsp;нас</a></li> -->
+					<li class="menu-item"><a class="menu-item__link" href="/#description">Характеристики</a></li>
+					<li class="menu-item"><a class="menu-item__link" href="/#what-in">Комплектация</a></li>
+					<li class="menu-item"><a class="menu-item__link" href="/#price">Цены</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="l--first-screen">
+		<div class="container">
+			<div class="col-md-8 l--first-screen__title">
+				<h1>Одноразовые ректальные наборы для гидроколонотерапии</h1>
+			</div>
+			<div class="col-md-4 l--first-screen__form">
+				<form id="form" method="POST" action="mailer.php">
+					<div class="l--first-screen__form__title">Оставьте заявку и&nbsp;наши менеджеры свяжутся с&nbsp;Вами</div>
+					<input type="text" name="name" placeholder="Введите свое имя" required="">
+					<input type="text" name="email" placeholder="Введите свой E-mail" required="">
+					<input type="text" name="quantity" placeholder="Укажите желаемое количество" required="">
+					<button class="cta">Отправить</button>
+				</form> 
+			</div>
+		</div>
+	</section>
+	<section class="l--what-is container-fluid">
+		<a name="what-is"></a>
+		<div class="container">
+			<h2>Что такое гидроколонотерапия?</h2>
+			<div class="container row">
+				<div class="col-md-6 col-sm-6">
+					<p class="l--what-is__description">
+						Гидроколонотерапия&nbsp;&mdash; это процедура по&nbsp;промыванию кишечника водой с&nbsp;целью выведения каловых шлаков, дезинтоксикации, коррекции минерального баланса организма и&nbsp;возобновлению нормальной кишечной флоры.<br><br><a class="l--what-is__description__link" href="/about.html">Подробнее о&nbsp;процедуре</a>
+					</p>
+				</div>
+				<div class="col-md-6 col-sm-6 l--what-is__image"><img src="img/hydrocolon.jpg"  alt="Пример процедуры"></div>
+			</div>
+		</div>
+	</section>
+	<section class="l--description container">
+		<a name="description"></a>
+		<h2>Описание</h2>
+		<table>
+			<tr>
+				<td class="l--description__cell-name">Производитель</td>
+				<td class="l--description__cell-description">Украина</td>
+			</tr>
+			<tr>
+				<td class="l--description__cell-name">Описание комплекта</td>
+				<td class="l--description__cell-description">Гофро-шланг, трубка ПВХ, спекула</td>
+			</tr>
+			<tr>
+				<td class="l--description__cell-name">Применение</td>
+				<td class="l--description__cell-description">Одноразовый расходный материал для гидроколонотерапии. Подходит для импортных и украинских аппаратов.</td>
+			</tr>
+		</table>
+		<div class="l--what-in">
+			<a name="what-in"></a>
+			<h2 class="what-in__h3">Что в комплекте?</h2>
+			<div class="l--what-in__wrapper container">
+				<div class="carousel slide" data-ride="carousel" id="product-slider">
+					<ul class="carousel-inner" role="listbox">
+						<!-- Wrapper for slides -->
+						<li class="item" data-img="0">
+							<img src="img/tube.jpg" alt="Трубка">
+							<div class="carousel-caption">
+								<h3>Трубка</h3>
+							</div>
+						</li>
+						<li class="item active" data-img="1">
+							<img src="img/spekula.jpg" alt="Спекула">
+							<div class="carousel-caption">
+								<h3>Спекула</h3>
+							</div>
+						</li>
+						<li class="item" data-img="2">
+							<img src="img/shlang.jpg" alt="Спекула">
+							<div class="carousel-caption">
+								<h3>Шланг-гофра</h3>
+							</div>
+						</li>
+					</ul>
+					<!-- Controls -->
+					<a class="left carousel-control" href="#product-slider" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#product-slider" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+
+					<ol class="carousel-indicators">
+						<li class="active"  data-target="#product-slider" data-slide-to="0"></li>
+						<li class=""  data-target="#product-slider" data-slide-to="1"></li>
+						<li class=""  data-target="#product-slider" data-slide-to="2"></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="l--price container-fluid">
+		<a name="price"></a>
+		<div class="container">
+			<h2>Цена</h2>
+			<div class="l--price__product"><img src="img/komplekt.jpg" alt="Комплект"></div>
+			<div class="l--price__price">
+				<div class="l--price__price__old">64 грн</div>
+				<div class="l--price__price__action">49 грн</div>
+			</div>
+			<button class="cta">Заказать</button>
+			<div class="l--price__cta">Успейте, пока действуют мартовские скидки!</div>
+			<div class="l--price__timer" id="timer">
+				<span id="days"></span>
+				<span id="hours"></span>
+				<span id="minutes"></span>
+				<span id="seconds"></span>
+			</div>
+		</div>
+	</section>
+	<footer class="l--footer container-fluid">
+		<div class="container">
+			<div class="col-md-1 col-sm-1 logo"><a href="/"><img src="img/logo/dark-logo.png" alt="Светлое лого"></a></div>
+			<div class="contacts">
+				<div class="contacts__tel"><a href="tel:+38 (097) 423-15-15"><i class="fa fa-mobile" aria-hidden="true"></i>+38 (097) 423-15-15</a></div>
+				<div class="contacts__call-me">
+					<a href="#this" id="get-footer-popup">Заказать обратный звонок</a>
+			<div class="contacts__call-me__popup col-md-4 col-sm-4">
+				<p>Укажите свой контактный номер и мы свяжемся с Вами в ближайшее время</p>
+				<input type="text" value="+38 (0__) ___-__-__" required>
+				<button class="send-tel">Отправить</button>
+			</div>
+		</div>
+	</div>
+</div>
+</footer>
+<div class="overlay modal-form">
+	<div class="col-md-4 l--first-screen__modal-form">
+		<form id="modal-form" method="POST" action="mailer.php">
+			<div class="l--first-screen__form__title">Оставьте заявку и&nbsp;наши менеджеры свяжутся с&nbsp;Вами</div>
+			<input type="text" name="name" placeholder="Введите свое имя" required="">
+			<input type="text" name="email" placeholder="Введите свой E-mail" required="">
+			<input type="text" name="quantity" placeholder="Укажите желаемое количество" required="">
+			<button class="cta">Отправить</button>
+		</form>
+	</div>
+</div>
+<div class="mail-popup">
+	<header><i class="fa fa-times"></i></header>
+	<section>
+		<div class="success">Сообщение отправленно успешно!<br><i class="fa fa-check-circle-o fa-5" aria-hidden="true"></i></div>
+		<div class="error">Ошибка!<br><span></span><i class="fa fa-times-circle-o fa-5" aria-hidden="true"></i></div>
+	</section>
+</div>
+<script src="https://use.fontawesome.com/b3c61977a6.js"></script>
+<!--[if IE 9]><link rel="stylesheet" type="text/css" href="css/ie-style.css"><![endif]-->
+	<!--[if IE 9]>
+	<script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+	<script src="js/ie-support.js"></script>
+	<![endif]-->
+	<script src=js/jquery-3.1.1.js></script>
+	<script src=js/bootstrap.min.js></script>
+	<script src=js/common.js></script>
+</body>
+</html>

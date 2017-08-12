@@ -1,0 +1,26 @@
+{
+  "name": "hydrocolon",
+  "description": "This is landing for hydrocolon.com.ua",
+  "main": "gulpfile.js",
+  "authors": [
+    "bruslik.dmitry@gmail.com"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DmitryPacificAtion/hydrocolon",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+    "html5shiv": "^3.7.3"
+  }
+}

@@ -1,0 +1,65 @@
+@function to-rem($values, $base-value: $rem-base) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+@mixin gradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+}
+
+@mixin box-shadow($x, $y, $blur, $spread, $color:rgba(0,0,0,0.75), $inset: false){
+	@if $inset {
+		-webkit-box-shadow: inset ($x + px) ($y + px) ($blur + px) ($spread + px) $color;
+			 -moz-box-shadow: inset ($x + px) ($y + px) ($blur + px) ($spread + px) $color;
+			  		box-shadow: inset ($x + px) ($y + px) ($blur + px) ($spread + px) $color;
+  } @else {
+		-webkit-box-shadow: ($x + px) ($y + px) ($blur + px) ($spread + px) $color;
+			 -moz-box-shadow: ($x + px) ($y + px) ($blur + px) ($spread + px) $color;
+			  		box-shadow: ($x + px) ($y + px) ($blur + px) ($spread + px) $color;
+  }
+}
+
+@mixin respond-to ($width, $max-width:false) {
+  @if $width == phone {
+     @media only screen and (max-width: $phone) { @content; }
+  }
+  @else if $width == phone-lan {
+     @media only screen and (max-width: $phone-lan) { @content; }
+  }
+  @else if $width == pda {
+     @media only screen and (max-width: $pda) { @content; }
+  }
+  @else if $width == pda-lan {
+     @media only screen and (max-width: $pda-lan) { @content; }
+  }
+  @else if $width == laptop {
+     @media only screen and (max-width: $laptop) { @content; }
+  }
+  @else if $width == desktop {
+     @media only screen and (max-width: $desktop) { @content; }
+  }
+  @else {
+     @media only screen and (max-width: $width) { @content; }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "hydrocolon.com.ua",
+  "version": "1.1.0",
+  "description": "Проект от компании Укрвет по продаже наборов для проведения процедуры гидроколонотерапии.\r Это проект в котором я впервые нарисовал дизайн. Не судите строго ))",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryPacificAtion/hydrocolon.git"
+  },
+  "author": "Dmitry Pacification",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DmitryPacificAtion/hydrocolon/issues"
+  },
+  "homepage": "https://github.com/DmitryPacificAtion/hydrocolon#readme",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-rename": "^1.2.2"
+  }
+}

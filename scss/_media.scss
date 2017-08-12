@@ -1,0 +1,271 @@
+@include respond-to(laptop) {
+	.l--header {
+		.container {
+			width: 100%;
+		}
+	}
+	.l--first-screen {
+		&__form, &__modal-form {
+			&__title {
+				font-size: to-rem(28);
+			}
+		}
+	}
+	.contacts {
+		&__call-me {
+			&__popup {
+				width: 345px;
+				right: 0;
+				button {
+					width: auto;
+				}
+			}
+		}
+	}
+	.menu {
+		&-item {
+			margin: 0 10px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+	.l--what-in {
+		&__wrapper {
+			&__text {
+				float: none;
+				li {
+					font-size: to-rem(28);
+					font-weight: 600;
+				}
+			}
+			.carousel {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+	.l--footer {
+		.contacts {
+			&__call-me {
+				&__popup {
+					right: -20px;
+				}
+			}
+		}
+	}
+}
+@include respond-to(pda-lan) {
+	.l--header {
+		.contacts {
+			padding-right: 0;
+		}
+		nav {
+			padding-right: 0;
+		}
+	}
+	.l--first-screen {
+		&__title {
+			max-width: none;
+			text-align: center;
+			h1 {
+				font-size: to-rem(61);
+			}
+		}
+		&__form {
+			float: none;
+			margin: 40px auto 0;
+			width: 60%;
+		}
+		&__modal-form {
+			left: 27.5%;
+			margin: 100px auto;
+			width: 50%;
+		}
+	}
+	.menu {
+		padding-left: 0;
+		&-item {
+			margin: 0;
+		}
+	}
+	button.cta {
+		max-width: none;
+	}
+	.l--price {
+		button.cta {
+			min-width: 135px;
+			width: 30%;
+		}
+	}
+}
+@include respond-to(pda) {
+	h2 {
+		font-size: to-rem(38);
+	}
+	.l--header {
+		.logo, .contacts {
+			float: left;
+		}
+		.contacts {
+			position: static;
+			&__call-me {
+				&__popup {
+					width: 100%;
+					box-shadow: none;
+					position: absolute;
+					right: 0;
+				}
+			}
+		}
+		.toggle-menu {
+			display: inline-block;
+		}
+		.container {
+			nav {
+				float: none;
+				padding: 0;
+				margin: 75px -30px 0;
+			}
+		}
+	}
+	.l--first-screen{
+		padding-top: 50px;
+	}
+	.menu {
+		display: none;
+		background-color: $medic-blue;
+		width: 100%;
+		&-item {
+			float: none;
+			padding: 15px 20px;
+		}
+	}
+	.l--footer {
+		.logo {
+			float: left;
+		}
+		.contacts {
+			&__call-me {
+				&__popup {
+					right: 15px;
+				}
+			}
+		}
+	}
+}
+@include respond-to(640px) {
+	h1 {
+		font-size: to-rem(46);
+	}
+}
+@include respond-to(phone-lan) {
+	.l--header {
+		.contacts {
+			padding-left: -0px;
+			&__call-me {
+				text-align: center;
+			}
+		}
+		.toggle-menu {
+			margin-right: -20px;
+		}
+	}
+	.logo {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: -10px;
+		width: 50px;
+	}
+	.l--first-screen {
+		&__title {
+			h1 {
+				font-size: to-rem(45);
+			}
+		}
+		&__form, &__modal-form {
+			width: 100%;
+		}
+		&__modal-form {
+			left: 0;
+		}
+	}
+	.l--description {
+		table {
+			width: 100%;
+		}
+		h3 {
+			font-size: to-rem(24);
+			margin-bottom: 30px;
+			margin-top: 5px;
+		}
+	}
+	.l--what-in {
+		&__wrapper {
+			width: 100%;
+			margin-bottom: 125px;
+			.carousel-caption {
+				position: static;
+				background-color: $text;
+				padding: 10px 0;
+			}
+			.carousel-indicators  {
+				bottom: 0;
+			}
+			img {
+				border-bottom: none;
+				border-radius: 5px 5px 0 0;
+			}
+		}
+	}
+	.l--price {
+		&__price {
+			margin-top: 50px;
+		}
+		&__timer {
+			font-size: to-rem(42);
+		}
+	}
+	.l--footer {
+		.contacts {
+			&__call-me {
+				&__popup {
+					box-shadow: none;
+					right: 0;
+					top: -99px;
+					width: 100%;
+				}
+			}
+		}
+	}
+	article {
+		h1 {
+			font-size: to-rem(34);
+		}
+	}
+}
+@include respond-to(380px){
+	.l--header {
+		.contacts {
+			&__tel a{
+				font-size: to-rem(25);
+			}
+		}
+	}
+	.l--first-screen__title {
+		h1 {
+			font-size: to-rem(35);
+		}
+	}
+}
+@include respond-to(phone) {
+	.l--header {
+		.toggle-menu {
+			margin-top: 20px;
+			height: 30px;
+			width: 30px;
+		}
+	}
+	.l--footer .contacts__tel a {
+		font-size: to-rem(28);
+	}
+}
