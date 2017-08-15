@@ -11,18 +11,17 @@ var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 
 gulp.task('sass-focusing', function () {
-	//Убрать лишний код и грохнуть перед деплоем
+	// Выбрать только необходимые файлы
 	gulp.src('./bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss')
 	.pipe(gulp.dest('./scss/'));
-	gulp.src('./bower_components/font-awesome/scss/font-awesome.scss')
-	.pipe(rename({prefix: '_'}))
-	.pipe(gulp.dest('./scss'));
-
-	// Выбрать только необходимые файлы
 	gulp.src('./bower_components/bootstrap-sass/assets/stylesheets/bootstrap/**/*.scss')
 	.pipe(gulp.dest('./scss/bootstrap'));
-	gulp.src('./bower_components/font-awesome/scss/*.scss')
-	.pipe(gulp.dest('./scss/font-awesome'));
+	gulp.src(['./bower_components/font-awesome/scss/*.scss', '!./bower_components/font-awesome/scss/font-awesome.scss'])
+	.pipe(gulp.dest('./scss/font-awesome/'));
+	gulp.src('./bower_components/font-awesome/scss/font-awesome.scss')
+	.pipe(rename({prefix: '_'}))
+	.pipe(gulp.dest('./scss/font-awesome/'));
+	//Убрать лишний код и грохнуть перед деплоем	
 });
 
 gulp.task('sass-watch', function () {
@@ -89,8 +88,8 @@ gulp.task('serve', ['sass-watch'], function() {
 // 		});
 // 	});
 
-gulp.task('build', ['sass-focusing', 'sass-watch', 'js', 'fonts', 'img', 'serve'], function () {
-	gulp.start('sass-focusing', 'sass-watch', 'js', 'fonts', 'img', 'serve');
+gulp.task('build', ['sass-focusing', 'sass-watch', 'js', 'fonts', 'img'], function () {
+	gulp.start('sass-focusing', 'sass-watch', 'js', 'fonts', 'img');
 });
 
 gulp.task('watch', ['sass-watch', 'js', 'serve'], function () {
