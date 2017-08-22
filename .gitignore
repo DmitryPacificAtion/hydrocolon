@@ -1,3 +1,6 @@
 node_modules
 bower_components
-css
+.build/css
+.build/js
+.build/img
+.build/fonts
